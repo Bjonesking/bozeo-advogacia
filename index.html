@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bózeo Advocacia — Boutique Jurídica em Macaé/RJ e em todo o Brasil</title>
+<meta name="description" content="Bózeo Advocacia — boutique jurídica com atuação em todo o Brasil e a mesma profundidade em Direito Imobiliário, Cível, Tributário, Empresarial e demais áreas do direito. Fale com um advogado.">
+<link rel="canonical" href="https://bozeo.adv.br/">
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bózeo Advocacia">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://bozeo.adv.br/">
+<meta property="og:title" content="Bózeo Advocacia — Boutique Jurídica em Macaé/RJ e em todo o Brasil">
+<meta property="og:description" content="Boutique jurídica em Macaé/RJ, com atuação em todo o Brasil e a mesma profundidade em Direito Imobiliário, Cível, Tributário, Empresarial e demais áreas. Fale com um advogado.">
+<meta property="og:image" content="https://bozeo.adv.br/img/og-bozeo-advocacia.jpg">
+<meta property="og:image:secure_url" content="https://bozeo.adv.br/img/og-bozeo-advocacia.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bózeo Advocacia — boutique jurídica em Macaé/RJ">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bózeo Advocacia — Boutique Jurídica em Macaé/RJ e em todo o Brasil">
+<meta name="twitter:description" content="Boutique jurídica em Macaé/RJ, com atuação em todo o Brasil e a mesma profundidade em Direito Imobiliário, Cível, Tributário, Empresarial e demais áreas. Fale com um advogado.">
+<meta name="twitter:image" content="https://bozeo.adv.br/img/og-bozeo-advocacia.jpg">
+<meta name="twitter:image:alt" content="Bózeo Advocacia — boutique jurídica em Macaé/RJ">
+
+
+<link rel="icon" href="img/logo/favicon.png" type="image/png">
+
+<!-- Google Fonts: Playfair Display (títulos) + Inter (corpo/navegação/botões) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Schema.org: identifica o escritório para buscadores (LegalService) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Bózeo Advocacia",
+  "image": "https://bozeo.adv.br/img/logo/bozeo-logo.webp",
+  "telephone": "+5522992610154",
+  "email": "contato@bozeo.adv.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Bariloche, nº 24, Cavaleiros",
+    "addressLocality": "Macaé",
+    "addressRegion": "RJ",
+    "addressCountry": "BR"
+  },
+  "areaServed": "Macaé, RJ",
+  "sameAs": ["https://www.instagram.com/bozeoadvocacia/"],
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<!-- ===================== ENTRADA (sequência de abertura) ===================== -->
+<!-- Roda uma vez por sessão (sessionStorage) e é pulada automaticamente se o
+     visitante tiver prefers-reduced-motion ativado, ou via botão "Pular". -->
+<div class="intro-overlay" id="introOverlay" aria-hidden="true">
+  <div class="intro-content">
+    <div class="intro-stamp">
+      <span class="intro-glow" aria-hidden="true"></span>
+      <span class="intro-ring" aria-hidden="true"></span>
+      <img src="img/logo/bozeo-simbolo-branco.webp" alt="" class="intro-symbol">
+    </div>
+    <span class="intro-wordmark">Bózeo Advocacia</span>
+    <span class="intro-protocol">Atuamos para que a injustiça não tenha a última palavra.</span>
+  </div>
+  <button type="button" class="intro-skip" id="introSkip">Pular</button>
+</div>
+<script>
+  // Decisão síncrona (antes do resto da página pintar) pra evitar flash da
+  // entrada em quem já viu nesta sessão ou tem prefers-reduced-motion ativo.
+  // A animação em si (fade/curtain) fica em js/main.js, carregado no fim do body.
+  (function () {
+    var overlay = document.getElementById('introOverlay');
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var seen = sessionStorage.getItem('bozeo-intro-seen') === '1';
+    if (reduced || seen) {
+      overlay.style.display = 'none';
+    } else {
+      sessionStorage.setItem('bozeo-intro-seen', '1');
+      document.documentElement.style.overflow = 'hidden';
+    }
+  })();
+</script>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="header__inner container">
+
+    <a href="#home" class="logo" aria-label="Bózeo Advocacia — página inicial">
+      <img src="img/logo/bozeo-logo-branco.webp" alt="Bózeo Advocacia" class="logo__img logo__img--light">
+      <img src="img/logo/bozeo-logo.webp" alt="Bózeo Advocacia" class="logo__img logo__img--dark">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <ul class="nav__list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#servicos" class="nav__link">Serviços</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#equipe" class="nav__link">Equipe</a></li>
+        <li><a href="blog/index.html" class="nav__link">Blog</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <div class="search" id="search">
+        <button type="button" class="search__toggle" id="searchToggle" aria-label="Abrir pesquisa" aria-expanded="false" aria-controls="searchForm">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Pesquisar</span>
+        </button>
+        <form class="search__form" id="searchForm" role="search">
+          <label for="searchInput" class="visually-hidden">Pesquisar no site</label>
+          <input type="search" id="searchInput" placeholder="O que você procura?" autocomplete="off">
+          <button type="submit" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <a href="#" class="btn btn--pill btn--ghost-light header__cta" data-whatsapp="Olá! Vim pelo site da Bózeo Advocacia e gostaria de contar o meu caso.">Conte-nos o seu caso</a>
+
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__head">
+    <img src="img/logo/bozeo-logo-branco.webp" alt="Bózeo Advocacia" class="mobile-menu__logo">
+    <button type="button" class="mobile-menu__close" id="mobileMenuClose" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+    </button>
+  </div>
+  <ul class="mobile-menu__list">
+    <li><a href="#home" class="mobile-menu__link">Home</a></li>
+    <li><a href="#servicos" class="mobile-menu__link">Serviços</a></li>
+    <li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
+    <li><a href="#equipe" class="mobile-menu__link">Equipe</a></li>
+    <li><a href="blog/index.html" class="mobile-menu__link">Blog</a></li>
+    <li><a href="#contato" class="mobile-menu__link">Contato</a></li>
+  </ul>
+  <a href="#" class="btn btn--pill btn--gold mobile-menu__cta" data-whatsapp="Olá! Vim pelo site da Bózeo Advocacia e gostaria de falar com um advogado.">Fale no WhatsApp →</a>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main id="main">
+
+  <!-- ===================== HERO — Promessa ===================== -->
+  <section class="hero" id="home">
+    <div class="hero__media" aria-hidden="true">
+      <img src="img/hero-justica-v2.webp" alt="" loading="eager">
+      <div class="hero__gradient"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <p class="eyebrow eyebrow--onDark reveal" data-reveal>Boutique Jurídica · Rio de Janeiro</p>
+      <h1 class="hero__title">
+        <span class="reveal" data-reveal data-reveal-delay="1">Decisões importantes pedem</span>
+        <span class="hero__title--gold reveal" data-reveal data-reveal-delay="2">segurança jurídica à altura.</span>
+      </h1>
+      <p class="hero__text reveal" data-reveal data-reveal-delay="3">
+        Você nos conta o que precisa resolver. Nós estruturamos o caminho, antecipamos riscos
+        e conduzimos cada etapa com clareza, estratégia e proximidade.
+      </p>
+      <div class="hero__actions reveal" data-reveal data-reveal-delay="4">
+        <a href="#" class="btn btn--pill btn--gold" data-whatsapp="Olá! Vim pelo site da Bózeo Advocacia e gostaria de contar o meu caso.">
+          <span>Conte-nos o seu caso</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+        </a>
+        <a href="#servicos" class="btn btn--pill btn--ghost-light">Conheça nossa atuação</a>
+      </div>
+      <p class="hero__signature reveal" data-reveal data-reveal-delay="5">Clareza para decidir. Segurança para avançar.</p>
+    </div>
+
+    <div class="hero__curve" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== PARA QUEM ATUAMOS ===================== -->
+  <section class="who-we-serve" id="para-quem">
+    <div class="container who-we-serve__head">
+      <p class="eyebrow eyebrow--deep reveal center" data-reveal>Para quem atuamos</p>
+      <h2 class="section-title center reveal" data-reveal>Pessoas, famílias <em>e empresas</em></h2>
+    </div>
+
+    <div class="container who-we-serve__grid">
+      <div class="diferencial-card who-card reveal" data-reveal>
+        <span class="diferencial-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20v-1c0-2.8 2.5-5 6-5s6 2.2 6 5v1"/><path d="M15 14.2c2.9.3 4.8 2.1 4.8 4.5V20"/></svg>
+        </span>
+        <h3>Pessoas e famílias</h3>
+        <p>Para quem precisa proteger um patrimônio, resolver uma pendência imobiliária, atravessar uma separação, discutir uma herança ou reverter um benefício negado — com alguém que explica antes de agir.</p>
+        <ul class="who-card__tags">
+          <li>Imobiliário</li>
+          <li>Família e Sucessões</li>
+          <li>Trabalhista</li>
+          <li>Previdenciário</li>
+          <li>Saúde</li>
+          <li>Cível</li>
+        </ul>
+        <a href="#" class="btn btn--pill btn--outline who-card__cta" data-whatsapp="Olá! Vim pelo site e gostaria de falar sobre o meu caso.">
+          <span>Falar sobre o meu caso</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+        </a>
+      </div>
+
+      <div class="diferencial-card who-card reveal" data-reveal>
+        <span class="diferencial-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
+        </span>
+        <h3>Empresas e empresários</h3>
+        <p>Para negócios que precisam de contratos bem redigidos, estrutura societária segura e planejamento tributário para crescer sem repetir os mesmos riscos.</p>
+        <ul class="who-card__tags">
+          <li>Empresarial</li>
+          <li>Tributário</li>
+          <li>Cível e Contratos</li>
+          <li>Imobiliário</li>
+          <li>Trabalhista</li>
+          <li>Previdenciário</li>
+        </ul>
+        <a href="#" class="btn btn--pill btn--outline who-card__cta" data-whatsapp="Olá! Vim pelo site e gostaria de falar sobre a minha empresa.">
+          <span>Falar sobre a minha empresa</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVIÇOS — Áreas de atuação ===================== -->
+  <section class="services" id="servicos">
+    <div class="container services__grid">
+
+      <div class="services__content">
+        <p class="eyebrow eyebrow--deep reveal" data-reveal>Como podemos ajudar</p>
+        <h2 class="section-title reveal" data-reveal>Áreas de <em>Atuação</em></h2>
+        <p class="section-sub reveal" data-reveal>Cada área parte do resultado prático que você precisa. Combinamos visão estratégica e rigor técnico para proteger o seu patrimônio, a sua empresa e os seus direitos. Veja onde o seu caso se encaixa:</p>
+
+        <ul class="service-list">
+          <li class="service-item reveal" data-reveal>
+            <button type="button" class="service-item__link" data-service="imobiliario" data-wa-message="Olá! Gostaria de falar sobre um caso de Direito Imobiliário." aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span class="service-item__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><rect x="10" y="14" width="4" height="6"/></svg>
+              </span>
+              <span class="service-item__text">
+                <strong>Direito Imobiliário</strong>
+                <small>
+                  <span class="service-item__result">Estruturação de negócios, proteção de patrimônio e atuação técnica em demandas imobiliárias complexas.</span>
+                  <span class="service-item__tags">Due Diligence e Transações · Regularização e Usucapião · Leilões · Ações possessórias · Vícios construtivos</span>
+                </small>
+              </span>
+              <svg class="service-item__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button type="button" class="service-item__more" data-service="imobiliario" aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span>Saiba mais</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </button>
+          </li>
+          <li class="service-item reveal" data-reveal>
+            <button type="button" class="service-item__link" data-service="civel" data-wa-message="Olá! Gostaria de falar sobre um caso Cível ou de resolução de conflitos." aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span class="service-item__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2h9l5 5v15H6z"/><polyline points="15 2 15 7 20 7"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+              </span>
+              <span class="service-item__text">
+                <strong>Cível e Resolução de Conflitos</strong>
+                <small>
+                  <span class="service-item__result">Prevenção e resolução estratégica de litígios, buscando a melhor equação financeira e legal para o seu caso.</span>
+                  <span class="service-item__tags">Responsabilidade civil · Danos morais e materiais · Mediação e acordos · Contratos · Cobranças e execuções</span>
+                </small>
+              </span>
+              <svg class="service-item__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button type="button" class="service-item__more" data-service="civel" aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span>Saiba mais</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </button>
+          </li>
+          <li class="service-item reveal" data-reveal>
+            <button type="button" class="service-item__link" data-service="empresarial" data-wa-message="Olá! Gostaria de falar sobre um caso Empresarial ou Societário." aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span class="service-item__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
+              </span>
+              <span class="service-item__text">
+                <strong>Direito Empresarial e Societário</strong>
+                <small>
+                  <span class="service-item__result">Suporte jurídico integral para proteger o ciclo de vida da sua empresa, mitigando riscos e garantindo conformidade.</span>
+                  <span class="service-item__tags">Constituição de empresas · Contratos e Vesting · Fusões e Aquisições (M&amp;A) · Conflitos societários · Sucessão empresarial</span>
+                </small>
+              </span>
+              <svg class="service-item__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button type="button" class="service-item__more" data-service="empresarial" aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span>Saiba mais</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </button>
+          </li>
+          <li class="service-item reveal" data-reveal>
+            <button type="button" class="service-item__link" data-service="tributario" data-wa-message="Olá! Gostaria de falar sobre um caso Tributário." aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span class="service-item__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><line x1="8" y1="16" x2="16" y2="8"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="15" r="1"/></svg>
+              </span>
+              <span class="service-item__text">
+                <strong>Direito Tributário</strong>
+                <small>
+                  <span class="service-item__result">Eficiência fiscal e defesa combativa, aliando profundo domínio da legislação e das regras da Reforma Tributária.</span>
+                  <span class="service-item__tags">Contencioso estratégico e CARF · Reforma Tributária · Imunidade e Isenção · Não incidência de ITBI · Recuperação de créditos</span>
+                </small>
+              </span>
+              <svg class="service-item__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button type="button" class="service-item__more" data-service="tributario" aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span>Saiba mais</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </button>
+          </li>
+          <li class="service-item reveal" data-reveal>
+            <button type="button" class="service-item__link" data-service="familia" data-wa-message="Olá! Gostaria de falar sobre um caso de Família ou Sucessões." aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span class="service-item__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20v-1c0-2.8 2.5-5 6-5s6 2.2 6 5v1"/><path d="M15 14.2c2.9.3 4.8 2.1 4.8 4.5V20"/></svg>
+              </span>
+              <span class="service-item__text">
+                <strong>Família e Sucessões</strong>
+                <small>
+                  <span class="service-item__result">Condução com discrição, empatia e firmeza para proteger o patrimônio e resolver conflitos familiares com agilidade.</span>
+                  <span class="service-item__tags">Inventários · Planejamento sucessório · Divórcio e União estável · Partilha de bens · Pensão e guarda</span>
+                </small>
+              </span>
+              <svg class="service-item__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button type="button" class="service-item__more" data-service="familia" aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span>Saiba mais</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </button>
+          </li>
+          <li class="service-item reveal" data-reveal>
+            <button type="button" class="service-item__link" data-service="trabalhista" data-wa-message="Olá! Gostaria de falar sobre um caso Trabalhista." aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span class="service-item__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </span>
+              <span class="service-item__text">
+                <strong>Direito do Trabalho</strong>
+                <small>
+                  <span class="service-item__result">Atuação estratégica e diligente para mitigar riscos estruturais em empresas e assegurar direitos no contencioso.</span>
+                  <span class="service-item__tags">Auditoria preventiva · Defesa em reclamações · Reconhecimento de vínculo · Rescisão indireta · Assédio moral</span>
+                </small>
+              </span>
+              <svg class="service-item__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button type="button" class="service-item__more" data-service="trabalhista" aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span>Saiba mais</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </button>
+          </li>
+          <li class="service-item reveal" data-reveal>
+            <button type="button" class="service-item__link" data-service="previdenciario" data-wa-message="Olá! Gostaria de falar sobre um caso Previdenciário ou de Direito da Saúde." aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span class="service-item__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/></svg>
+              </span>
+              <span class="service-item__text">
+                <strong>Direito Previdenciário e da Saúde</strong>
+                <small>
+                  <span class="service-item__result">Diligência para garantir seu benefício no INSS e combate incisivo contra abusos de operadoras de planos de saúde.</span>
+                  <span class="service-item__tags">Planejamento e Aposentadorias · Liminares para medicamentos · Reversão de negativas cirúrgicas · Erro médico</span>
+                </small>
+              </span>
+              <svg class="service-item__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button type="button" class="service-item__more" data-service="previdenciario" aria-haspopup="dialog" aria-controls="serviceDetail">
+              <span>Saiba mais</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="services__media reveal" data-reveal>
+        <div class="services__blob" aria-hidden="true"></div>
+        <!-- SUBSTITUIR: foto de estátua da justiça em tom claro -->
+        <img src="img/services-statue.svg" alt="Estátua da justiça, representando as áreas de atuação do escritório" loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Painel de detalhe de cada área de atuação, aberto pelo botão "Saiba mais" de cada card -->
+  <div class="service-detail" id="serviceDetail" aria-hidden="true">
+    <div class="service-detail__overlay" data-service-close></div>
+    <div class="service-detail__panel" role="dialog" aria-modal="true" aria-labelledby="serviceDetailTitle">
+      <button type="button" class="service-detail__close" data-service-close aria-label="Fechar detalhe da área">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+      </button>
+      <div class="service-detail__scroll">
+        <span class="service-detail__icon" id="serviceDetailIcon" aria-hidden="true"></span>
+        <p class="service-detail__eyebrow">Área de atuação</p>
+        <h3 class="service-detail__title" id="serviceDetailTitle"></h3>
+        <p class="service-detail__result" id="serviceDetailResult"></p>
+        <div class="service-detail__body" id="serviceDetailBody"></div>
+        <a href="#" class="btn btn--pill btn--gold service-detail__cta" id="serviceDetailCta">
+          <span>Conte-nos o seu caso</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SOBRE — Por que a Bózeo ===================== -->
+  <section class="about" id="sobre">
+    <div class="container about__grid">
+
+      <div class="about__media reveal" data-reveal>
+        <p class="eyebrow eyebrow--deep">Atendimento</p>
+        <p class="about__caption">Segunda a sexta, das 9h às 18h — presencialmente em Macaé ou onde o seu caso estiver.</p>
+        <div class="about__photo about__photo--brand">
+          <span class="about__photo-ring" aria-hidden="true"></span>
+          <img src="img/logo/bozeo-simbolo-branco.webp" alt="Símbolo da Bózeo Advocacia" loading="lazy">
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="eyebrow eyebrow--deep reveal" data-reveal>Por que a Bózeo</p>
+        <h2 class="section-title reveal" data-reveal>
+          A Bózeo nasceu de uma <em>inconformidade</em>
+        </h2>
+        <p class="about__text reveal" data-reveal>
+          Acreditamos que o cliente não deveria precisar entender o juridiquês, cobrar informações ou
+          descobrir sozinho o próximo passo de uma questão importante. Por isso, construímos uma advocacia
+          baseada em proximidade, estratégia e clareza — próxima o bastante para que nenhum cliente seja
+          apenas mais um número, e completa o bastante para sustentar, com a mesma seriedade, cada área
+          que a vida de quem confia em nós exigir.
+        </p>
+        <p class="about__closing reveal" data-reveal>
+          Aqui, cada caso precisa ter direção. E cada cliente precisa saber qual é o próximo passo.
+        </p>
+      </div>
+    </div>
+
+    <div class="container about__strip">
+      <a href="#equipe" class="btn btn--pill btn--outline about__cta reveal" data-reveal>
+        <span>Conheça nossos advogados</span>
+        <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+      </a>
+
+      <div class="values reveal" data-reveal>
+        <p class="values__label">Nossos valores</p>
+        <ul class="values__grid">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Segurança</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg><span>Transparência</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 6 21l6-3 6 3-2.5-7.5"/></svg><span>Experiência</span></li>
+        </ul>
+      </div>
+
+      <div class="about__layered reveal" data-reveal>
+        <div class="about__photoLarge">
+          <!-- SUBSTITUIR: foto de ambiente interno do escritório -->
+          <img src="img/about-office.svg" alt="Ambiente interno do escritório de advocacia" loading="lazy">
+        </div>
+        <blockquote class="about__quoteCard">
+          <p>“Atuamos para que a injustiça não tenha a última palavra.”</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MÉTODO — Como trabalhamos ===================== -->
+  <section class="diferenciais" id="metodo">
+    <div class="container diferenciais__head">
+      <p class="eyebrow eyebrow--deep reveal center" data-reveal>Como trabalhamos</p>
+      <h2 class="section-title center reveal" data-reveal>Nosso <em>método</em></h2>
+    </div>
+
+    <div class="container diferenciais__grid">
+      <div class="diferencial-card reveal" data-reveal>
+        <span class="diferencial-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><polyline points="15 2 15 7 20 7"/><circle cx="10.5" cy="14.5" r="2.5"/><line x1="12.3" y1="16.3" x2="14" y2="18"/></svg>
+        </span>
+        <h3>Entender antes de agir</h3>
+        <p>Nenhuma estratégia começa sem entender a fundo o que está em jogo. Analisamos provas, documentos e contexto antes de indicar qualquer caminho.</p>
+      </div>
+      <div class="diferencial-card reveal" data-reveal>
+        <span class="diferencial-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1c0-3.3 3.6-6 8-6s8 2.7 8 6v1"/></svg>
+        </span>
+        <h3>Quem conhece o caso, conduz o caso</h3>
+        <p>Você fala com quem está tocando o seu processo do início ao fim — não com uma central de atendimento.</p>
+      </div>
+      <div class="diferencial-card reveal" data-reveal>
+        <span class="diferencial-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><polyline points="15 2 15 7 20 7"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
+        </span>
+        <h3>Clareza para decidir</h3>
+        <p>Prazos, documentos e próximos passos, explicados em linguagem direta — para você decidir com informação, não com dúvida.</p>
+      </div>
+      <div class="diferencial-card reveal" data-reveal>
+        <span class="diferencial-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </span>
+        <h3>Processo é meio, não objetivo</h3>
+        <p>Priorizamos o caminho mais direto para resolver, e reservamos o processo judicial para quando ele for, de fato, o mais indicado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="how-it-works" id="como-funciona">
+    <div class="container how-it-works__head">
+      <p class="eyebrow eyebrow--deep reveal center" data-reveal>Como funciona</p>
+      <h2 class="section-title center reveal" data-reveal>Do primeiro contato à <em>solução</em></h2>
+    </div>
+
+    <div class="container how-it-works__grid">
+      <div class="how-step reveal" data-reveal>
+        <span class="how-step__number">01</span>
+        <h3>Entendemos a situação</h3>
+        <p>Você conta o que está acontecendo, sem precisar traduzir isso para juridiquês. Ouvimos antes de sugerir qualquer caminho.</p>
+      </div>
+      <div class="how-step reveal" data-reveal>
+        <span class="how-step__number">02</span>
+        <h3>Estruturamos o caminho</h3>
+        <p>Analisamos documentos, provas e histórico para montar uma estratégia clara — e explicamos as opções reais antes de qualquer decisão.</p>
+      </div>
+      <div class="how-step reveal" data-reveal>
+        <span class="how-step__number">03</span>
+        <h3>Conduzimos cada etapa</h3>
+        <p>Você acompanha o andamento do caso já traduzido, com quem está tocando o processo — sem esperar para saber o que está acontecendo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EQUIPE — Quem conduz ===================== -->
+  <section class="team" id="equipe">
+    <div class="container">
+      <p class="eyebrow eyebrow--deep reveal center" data-reveal>Quem conduz</p>
+      <h2 class="section-title center reveal" data-reveal>Quem conduz o seu <em>caso</em></h2>
+      <p class="section-sub center reveal" data-reveal>
+        Advogados com atuação direta em cada etapa do seu caso — da primeira conversa à decisão final.
+      </p>
+    </div>
+
+    <div class="carousel team__carousel reveal" data-reveal data-carousel data-per-view-desktop="3" data-per-view-tablet="2" data-per-view-mobile="1">
+      <div class="carousel__viewport">
+        <ul class="carousel__track">
+
+          <li class="team-card">
+            <div class="team-card__photo"><img src="img/romulo.webp" alt="Retrato de Dr. Rômulo Bózeo" loading="lazy"></div>
+            <div class="team-card__overlay">
+              <h3>Rômulo Bózeo</h3>
+              <p>Imobiliário, Cível, Tributário e Empresarial</p>
+              <div class="team-card__social">
+                <button type="button" class="team-card__bio" data-bio="romulo">Ler biografia</button>
+                <a href="https://www.instagram.com/bozeoadvocacia/" target="_blank" rel="noopener" aria-label="Bózeo Advocacia no Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="team-card">
+            <div class="team-card__photo"><img src="img/ingrid.webp" alt="Retrato de Dra. Ingrid Fonseca" loading="lazy"></div>
+            <div class="team-card__overlay">
+              <h3>Ingrid Fonseca</h3>
+              <p>Empresarial, Cível e Tributário</p>
+              <div class="team-card__social">
+                <button type="button" class="team-card__bio" data-bio="ingrid">Ler biografia</button>
+                <a href="https://www.instagram.com/bozeoadvocacia/" target="_blank" rel="noopener" aria-label="Bózeo Advocacia no Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="team-card">
+            <div class="team-card__photo"><img src="img/juliana.webp" alt="Retrato de Dra. Juliana Miranda" loading="lazy"></div>
+            <div class="team-card__overlay">
+              <h3>Juliana Miranda</h3>
+              <p>Direito Médico e Trabalhista</p>
+              <div class="team-card__social">
+                <button type="button" class="team-card__bio" data-bio="juliana">Ler biografia</button>
+                <a href="https://www.instagram.com/bozeoadvocacia/" target="_blank" rel="noopener" aria-label="Bózeo Advocacia no Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="team-card">
+            <div class="team-card__photo"><img src="img/amanda.webp" alt="Retrato de Dra. Amanda Figueira" loading="lazy"></div>
+            <div class="team-card__overlay">
+              <h3>Amanda Figueira</h3>
+              <p>Previdenciário e Família</p>
+              <div class="team-card__social">
+                <button type="button" class="team-card__bio" data-bio="amanda">Ler biografia</button>
+                <a href="https://www.instagram.com/bozeoadvocacia/" target="_blank" rel="noopener" aria-label="Bózeo Advocacia no Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="carousel__nav">
+        <button type="button" class="carousel__arrow" data-carousel-prev aria-label="Advogado anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button type="button" class="carousel__arrow" data-carousel-next aria-label="Próximo advogado">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de biografia completa, aberto pelo botão "Ler biografia" de cada card -->
+  <div class="bio-modal" id="bioModal" aria-hidden="true">
+    <div class="bio-modal__overlay" data-bio-close></div>
+    <div class="bio-modal__panel" role="dialog" aria-modal="true" aria-labelledby="bioModalName">
+      <button type="button" class="bio-modal__close" data-bio-close aria-label="Fechar biografia">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+      </button>
+      <div class="bio-modal__photo"><img id="bioModalPhoto" src="" alt=""></div>
+      <div class="bio-modal__content">
+        <h3 id="bioModalName"></h3>
+        <p class="bio-modal__role" id="bioModalRole"></p>
+        <div id="bioModalText"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BLOG (prévia) — Conteúdo ===================== -->
+  <section class="blog-preview" id="blog">
+    <div class="container">
+      <p class="eyebrow eyebrow--deep reveal center" data-reveal>Conteúdo</p>
+      <h2 class="section-title center reveal" data-reveal>Direito explicado para decisões <em>reais</em></h2>
+      <p class="section-sub center reveal" data-reveal>
+        Análises e conteúdos produzidos pela equipe Bózeo para ajudar você a compreender questões jurídicas que afetam seu patrimônio, sua empresa e sua vida.
+      </p>
+    </div>
+    <div class="container blog-preview__grid">
+      <a class="blog-card reveal" data-reveal href="blog/regularizacao-de-imoveis-macae.html">
+        <span class="blog-card__tag">Imobiliário</span>
+        <h3>Regularização de imóveis em Macaé: guia completo</h3>
+        <p>O que fazer quando o imóvel tem pendências no registro — do diagnóstico ao título definitivo.</p>
+        <span class="blog-card__read">Ler artigo <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></span>
+      </a>
+      <a class="blog-card reveal" data-reveal href="blog/usucapiao-como-funciona.html">
+        <span class="blog-card__tag">Imobiliário</span>
+        <h3>Usucapião: o que é e quando vale a pena pedir</h3>
+        <p>Entenda os requisitos, os tipos de usucapião previstos em lei e o caminho judicial ou extrajudicial.</p>
+        <span class="blog-card__read">Ler artigo <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></span>
+      </a>
+      <a class="blog-card reveal" data-reveal href="blog/aposentadoria-negada-inss.html">
+        <span class="blog-card__tag">Previdenciário</span>
+        <h3>Aposentadoria negada pelo INSS: o que fazer</h3>
+        <p>Os motivos mais comuns de negativa e os caminhos administrativo e judicial para reverter a decisão.</p>
+        <span class="blog-card__read">Ler artigo <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></span>
+      </a>
+    </div>
+    <div class="container blog-preview__cta">
+      <a href="blog/index.html" class="btn btn--pill btn--outline reveal" data-reveal>
+        <span>Ver todos os artigos</span>
+        <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO — Conversão ===================== -->
+  <section class="contact" id="contato">
+    <div class="container contact__grid">
+
+      <div class="contact__media reveal" data-reveal>
+        <div class="contact__block" aria-hidden="true"></div>
+        <!-- SUBSTITUIR: foto de atendimento, duas pessoas numa mesa -->
+        <img src="img/contact-meeting.svg" alt="Advogado atendendo cliente em reunião de mesa" loading="lazy">
+      </div>
+
+      <div class="contact__content">
+        <h2 class="section-title reveal" data-reveal>Vamos entender o que precisa ser <em>resolvido</em></h2>
+
+        <a href="#" class="contact__whatsapp reveal" data-reveal data-whatsapp="Olá! Vim pelo site e gostaria de falar com um advogado.">
+          <span class="contact__whatsapp-icon">
+            <svg viewBox="2 0.57 23.69 23.27" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.7 17.4L2 22l4.7-1.6A11 11 0 1 0 20.5 3.5Z"/><path d="M8.3 8.5c-.3.7-.5 1.6 0 2.7 1 2.3 4.2 5.4 6.5 6.3 1 .4 1.9.3 2.6-.1.5-.3.9-.9 1-1.5l.1-.6-2.3-1.2c-.3-.1-.5-.1-.7.1l-.6.7c-.1.2-.4.2-.6.1-1-.5-2.4-1.8-3-2.9-.1-.2-.1-.4.1-.6l.6-.7c.2-.2.2-.4.1-.7L11 8.4l-.6-.1c-.6 0-1.4.3-2.1 1.2Z" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="contact__whatsapp-text">
+            <strong>Prefere falar agora?</strong>
+            <small>Fale direto com um advogado pelo WhatsApp — resposta rápida, sem formulário</small>
+          </span>
+          <span class="contact__whatsapp-cta">
+            Falar no WhatsApp
+            <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </span>
+        </a>
+
+        <p class="contact__intro reveal" data-reveal>
+          Prefere preencher um formulário? Descreva seu caso abaixo e nossa equipe entrará em contato.
+          Você também pode ligar para <strong>(22) 99261-0154</strong> ou escrever para
+          <strong>contato@bozeo.adv.br</strong>.
+        </p>
+
+        <form class="contact-form" id="contactForm" data-reveal novalidate>
+          <div class="contact-form__row">
+            <div class="field">
+              <label for="firstName">Nome completo</label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+              <span class="field__error" id="firstNameError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="lastName">Sobrenome</label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+              <span class="field__error" id="lastNameError" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="contact-form__row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <span class="field__error" id="emailError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Telefone</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(00) 00000-0000">
+              <span class="field__error" id="phoneError" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Descrição</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="field__error" id="messageError" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--pill btn--gold">
+            <span>Enviar</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </button>
+
+          <p class="contact-form__feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer__brand">
+      <a href="#home" class="logo" aria-label="Bózeo Advocacia — página inicial">
+        <img src="img/logo/bozeo-logo-branco.webp" alt="Bózeo Advocacia" class="footer__logo">
+      </a>
+      <p class="footer__tagline">Clareza para decidir. Segurança para avançar.</p>
+      <p class="footer__phone">(22) 99261-0154</p>
+      <p class="footer__address">Rua Bariloche, nº 24, Cavaleiros, Macaé — RJ</p>
+      <a class="footer__social" href="https://www.instagram.com/bozeoadvocacia/" target="_blank" rel="noopener" aria-label="Bózeo Advocacia no Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <span>@bozeoadvocacia</span>
+      </a>
+    </div>
+
+    <nav class="footer__col" aria-label="Menu do rodapé">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__col" aria-label="Áreas de atuação">
+      <h3>Áreas de atuação</h3>
+      <ul>
+        <li><a href="#servicos" data-service-jump="imobiliario">Direito Imobiliário</a></li>
+        <li><a href="#servicos" data-service-jump="civel">Cível e Resolução de Conflitos</a></li>
+        <li><a href="#servicos" data-service-jump="empresarial">Direito Empresarial e Societário</a></li>
+        <li><a href="#servicos" data-service-jump="tributario">Direito Tributário</a></li>
+        <li><a href="#servicos" data-service-jump="familia">Família e Sucessões</a></li>
+        <li><a href="#servicos" data-service-jump="trabalhista">Direito do Trabalho</a></li>
+        <li><a href="#servicos" data-service-jump="previdenciario">Direito Previdenciário e da Saúde</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h3>Contato</h3>
+      <ul>
+        <li><a href="tel:+5522992610154">(22) 99261-0154</a></li>
+        <li><a href="mailto:contato@bozeo.adv.br">contato@bozeo.adv.br</a></li>
+        <li><a href="#" data-whatsapp="Olá! Vim pelo site da Bózeo Advocacia e gostaria de falar com um advogado.">Falar no WhatsApp</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <p>© <span id="footerYear">2026</span> Bózeo Advocacia. Todos os direitos reservados. OAB/RJ 244.018.</p>
+  </div>
+</footer>
+
+<!-- Botão flutuante de WhatsApp -->
+<a href="#" class="whatsapp-float" data-whatsapp="Olá! Vim pelo site da Bózeo Advocacia e gostaria de falar com um advogado." aria-label="Falar no WhatsApp">
+  <svg viewBox="2 0.57 23.69 23.27" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.7 17.4L2 22l4.7-1.6A11 11 0 1 0 20.5 3.5Z"/><path d="M8.3 8.5c-.3.7-.5 1.6 0 2.7 1 2.3 4.2 5.4 6.5 6.3 1 .4 1.9.3 2.6-.1.5-.3.9-.9 1-1.5l.1-.6-2.3-1.2c-.3-.1-.5-.1-.7.1l-.6.7c-.1.2-.4.2-.6.1-1-.5-2.4-1.8-3-2.9-.1-.2-.1-.4.1-.6l.6-.7c.2-.2.2-.4.1-.7L11 8.4l-.6-.1c-.6 0-1.4.3-2.1 1.2Z" fill="currentColor" stroke="none"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
