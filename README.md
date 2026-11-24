@@ -1,5 +1,9 @@
 # Bózeo Advocacia — site institucional
 
+SITE PRONTO - https://bozeo.adv.br/
+<img width="1248" height="919" alt="image" src="https://github.com/user-attachments/assets/cd5b7f5e-923c-412e-8399-e54d70ffa896" />
+
+
 Site institucional completo da **Bózeo Advocacia** (Macaé/RJ), com dados, fotos, logo e cultura reais do escritório. HTML5 + CSS3 + JavaScript vanilla, sem build step e sem frameworks — abre direto no navegador a partir do `index.html`.
 
 Layout, ritmo visual e interações foram inspirados em `https://grupoadvmarc.regiscardoso.com.br/` (referência de estrutura/animação). Marca, fotos, logo, textos e conteúdo são 100% da Bózeo Advocacia.
